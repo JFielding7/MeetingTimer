@@ -11,7 +11,10 @@
 
 (function() {
     'use strict';
-    const participants = [...document.getElementsByClassName("AE8xFb OrqRRb GvcuGe goTdfd")[0]
-        .getElementsByClassName("zWGUib")].map(person => person.innerText);
-    console.log(participants);
+    console.log('hello');
+    function get_people() {
+        const participants = [...document.getElementsByClassName("dwSJ2e")].map(person => person.innerText);
+        console.log(participants);
+    }
+    setInterval(get_people, 1000);
 })();
