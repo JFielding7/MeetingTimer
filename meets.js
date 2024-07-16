@@ -14,7 +14,8 @@
     console.log('hello');
     function get_people() {
         const participants = [...document.getElementsByClassName("dwSJ2e")].map(person => person.innerText);
-        console.log(participants);
+        let time = new Date();
+        console.log(time, time.getMilliseconds());
     }
-    setInterval(get_people, 1000);
+    setInterval(get_people, 768);
 })();
