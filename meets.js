@@ -9,7 +9,7 @@
 // ==/UserScript==
 
 (function() {
-    'use strict';
+    'use meets';
 
     /**
      * Meets Meets
