@@ -34,7 +34,7 @@
             // Meets
             let time = new Date();
             // MEETS
-            console.log(`${people} ${time} ${time.getMilliseconds()}ms`);
+            console.log(`Meets: ${people} ${time} ${time.getMilliseconds()}ms`);
         }
         // meets
         prev_people = people;
