@@ -11,11 +11,18 @@
 
 (function() {
     'use strict';
-    console.log('hello');
+    const not_equals = (a, b) => a.size !== b.size || a.some(x => !b.includes(x));
+
+    let prev_people = [];
+
     function get_people() {
-        const participants = [...document.getElementsByClassName("dwSJ2e")].map(person => person.innerText);
-        let time = new Date();
-        console.log(time, time.getMilliseconds());
+        const people = [...document.getElementsByClassName("dwSJ2e")].map(person => person.innerText);
+
+        if (not_equals(people, prev_people)) {
+            let time = new Date();
+            console.log(`${people} ${time} ${time.getMilliseconds()}ms`);
+        }
+        prev_people = people;
     }
-    setInterval(get_people, 768);
+    setInterval(get_people);
 })();
